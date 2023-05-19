@@ -1,0 +1,17 @@
+class Person {
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+List<Person> people = new List<Person> {
+    new Person { Name = "John", Age = 25 },
+    new Person { Name = "Sarah", Age = 30 },
+    new Person { Name = "Michael", Age = 20 }
+};
+
+people.Sort((p1, p2) => p1.Age.CompareTo(p2.Age));
+
+foreach (Person person in people) {
+    Console.WriteLine(person.Name + ": " + person.Age);
+}
+
